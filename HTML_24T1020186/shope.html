@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Shopee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #fb003e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+        .product img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .product:hover img {
+            transform: scale(1.1);
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #fb003e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chào mừng đến với Shopee</h1>
+</header>
+
+<div class="container">
+    <div class="product" onclick="goToPage('product1.html')">
+        <img src="https://via.placeholder.com/200" alt="Sản phẩm 1">
+        <h3>Sản phẩm 1</h3>
+    </div>
+    <div class="product" onclick="goToPage('product2.html')">
+        <img src="https://via.placeholder.com/200" alt="Sản phẩm 2">
+        <h3>Sản phẩm 2</h3>
+    </div>
+    <div class="product" onclick="goToPage('product3.html')">
+        <img src="https://via.placeholder.com/200" alt="Sản phẩm 3">
+        <h3>Sản phẩm 3</h3>
+    </div>
+    <div class="product" onclick="goToPage('product4.html')">
+        <img src="https://via.placeholder.com/200" alt="Sản phẩm 4">
+        <h3>Sản phẩm 4</h3>
+    </div>
+</div>
+
+<footer>
+    <p>Bản quyền © 2024 Shopee</p>
+</footer>
+
+<script>
+    function goToPage(page) {
+        window.location.href = page;
+    }
+</script>
+
+</body>
+</html>
