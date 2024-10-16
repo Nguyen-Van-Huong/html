@@ -1,0 +1,35 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+#school-name{
+    font-weight: bold;
+    font-size: 30px;
+    color: brown;
+    margin-bottom: 20px;
+}
+.dept-name{
+    font-weight: bold;
+    font-size: 24px;
+    color: red;
+}
+.text-italit{
+    font-style: italic;
+}
+.text-underline{
+    text-decoration: underline;
+}
+p{
+    text-align: justify ;
+    line-height: 20px;
+}
+.intro-title{
+    font-weight: bold;
+    color: blueviolet;
+}
+h1{
+    color: blue;
+}
+h1{
+    color: rebeccapurple;
+}

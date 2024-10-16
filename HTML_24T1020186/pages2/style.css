@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    border: 2px solid red;
+    width: 500px;
+}
+.item {
+    display: table-cell;
+    width: 100px;
+    height: 300px;
+    border: 2px solid green;
+    /* margin: 20px;
+    padding: 10px; */
+}
+
+
+#item-2{
+    height: 300px ;
+    width: 200;
+    
+}
