@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+.container {
+    margin: 50px;
+    border: 5px solid yellow;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: aliceblue;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.overlay {
+    background-color: #000000;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    opacity: 0.5;
+}
