@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 13px;
+}
+
+/* |phần menu| */
+
+a{
+     text-decoration: none;
+}
+
+body {
+    min-height: 1500px;
+    background-image: url(../images/bg-top.jpg), url(../images/bg-bottom.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-color: #F2F2F2;
+    background-size: contain,contain;
+}
+
+.header {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+#menu a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu li+li {
+    border-left: 1px solid white;
+}
+
+#menu li {
+    list-style: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.space {
+    width: 230px !important;
+}
+
+/* |phần Thân| */
+
+#section-1 {
+    border: 5px solid #112141;
+    background-color: #112141;
+    width: 1030px;
+    height: 265px;
+    margin: 0 auto;
+    margin-top: 700px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.2fr ;
+    column-gap: 5px;
+
+}
+
+#long-den {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    z-index: 999;
+}
+
+/* .mid-butom{
+    
+} */
+
+#left-buttons {
+    display: grid;
+    grid-template-rows: 126px 62px 62px;
+    gap: 3px;
+}
+
+#tai-game {
+    background-image: url(../images/btn_taigame.jpg);
+    opacity: 1;
+}
+#dang-ky {
+    background-image: url(../images/buttons-left.png);
+    background-position: 0 -2px;
+}
+
+#dang-ky:hover {
+    background-position: -248px -2px;
+    opacity: 1;
+}
+
+#nap-the {
+    background-image: url(../images/buttons-left.png);
+    background-position: 0 -66px;
+}
+
+
+#nap-the:hover{
+    background-position: -248px -66px;
+    opacity: 1;
+}
+
+/* .slider >img {
+
+} */
+
+#right-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110px 110px auto;
+}
+#giang-ho {
+    background-image: url(../images/buttons-right.png);
+    background-position: 0px -8px;
+}
+
+
