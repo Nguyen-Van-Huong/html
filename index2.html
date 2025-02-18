@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+
+    <!-- STYLE  -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet/less" type="text/css" href="styles2.less" />
+
+    <!-- FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="src/1. symbol.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Phía Trái -->
+      <div class="left-container">
+        <a href=""><i class="fa-duotone fa-solid fa-screwdriver-wrench"></i></a>
+        <a href=""><i class="fa-regular fa-folder-open"></i></a>
+        <a href=""><i class="fa-solid fa-file-circle-plus"></i></a>
+        <a href=""><i class="fa-solid fa-sliders"></i></a>
+        <a href=""><i class="fa-solid fa-language"></i></a>
+        <a href=""><i class="fa-regular fa-circle-question"></i></a>
+      </div>
+
+      <!-- Phía Phải -->
+      <div class="right-container">
+        <div class="header">
+          <div class="header logo-header">
+            <img src="src/xanh.png" alt="Logo" />
+          </div>
+          <div class="header menu-header">
+            <div class="left-toolbar toolbar">
+              <select class="btn dropdown">
+                <option>Arduino Uno</option>
+                <option>Arduino Nano</option>
+                <option>Arduino Mega</option>
+              </select>
+              <button class="btn upload">
+                <i class="fa-solid fa-right-long"></i>
+                Upload
+              </button>
+              <button class="btn blink">Blink</button>
+              <button class="btn export">Export</button>
+            </div>
+
+            <div class="right-toolbar toolbar">
+              <button class="btn clear">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+              <button class="btn undo">
+                <i class="fa-solid fa-undo"></i>
+              </button>
+              <button class="btn redo">
+                <i class="fa-solid fa-redo"></i>
+              </button>
+              <button class="btn hide-sidebar">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Hide Sidebar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="left-content">
+            <!-- <div class="left-content tool"></div> -->
+            <div class="container-content">
+
+              <!-- Vùng chứa menu icon -->
+              <div class="sidebar">
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span>Input/Output</span>
+                </div>
+                
+                <div class="icon" onclick="togglePane(2)">
+                  <i class="fa-solid fa-circle"></i>
+                  <span>Sensors</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-gears"></i>
+                  <span>Motion</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-square"></i>
+                  <span>Control</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>Logic</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                  <span>Loops</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-infinity"></i>
+                  <span>Math</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-a"></i>
+                  <span>Text</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>Variables</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-regular fa-square"></i>
+                  <span>Functions</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-regular fa-message"></i>
+                  <span>Messaging</span>
+                </div>
+                <div class="icon" onclick="togglePane(1)">
+                  <i class="fa-solid fa-droplet"></i>
+                  <span>Color</span>
+                </div>
+              </div>
+
+              <!-- panel chứa block kéo thả -->
+                <div class="panel" id="panel">
+                  <div class="draggable-block" draggable="true" ondragstart="drag(event, 'blue')">🟦 Block 1</div>
+                  <div class="draggable-block" draggable="true" ondragstart="drag(event, 'green')">🟩 Block 2</div>
+                  <div class="draggable-block" draggable="true" ondragstart="drag(event, 'red')">🟥 Block 3</div>
+                  </div>
+                </div>
+              <!-- Khu vực kéo thả -->
+                <canvas id="dropZone" ondragover="allowDrop(event)" ondrop="drop(event)"></canvas>
+            </div>
+            <div class="right-content">
+              2
+            </div>
+          </div>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
